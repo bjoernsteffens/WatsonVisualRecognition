@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap + jQuery -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+
+    <header>
+    </header>
+
+    <body>
+
+        <div class="jumbotron">
+            <h1>IBM Watson Visual Recognition API</h1>
+            <hr>
+            <h2>IBM Watson Visual Recognition Classified This Image</h2>
+            <img src='<%= mytext %>'>
+            <p>Image File: <a href='<%= mytext %>'><%= mytext %></a></p>
+            <form action="/" method="GET" role="form">
+                <button style="margin-left: 50px" type="submit" class="btn btn-primary btn-sm">Classify Another Image</button>
+            </form>
+            <hr>
+            <h2>IBM Watson Visual Recognition Classification Data</h2>
+                <table>
+                    <tr>
+                        <th>Image Class</th>
+                        <th>Classification Score (Probability)</th>
+                        <th>Classification Score (Visual)</th>
+                        <th>Classification Hierarchy</th>
+                    </tr>
+                    <% images.forEach(function(image) { %>
+                        <tr>
+                            <td><%= image.class %></td>
+                            <td><%= image.score %></td>
+                            <td>
+                                <svg version="1.1" id="line_2" 
+                                   xmlns="http://www.w3.org/2000/svg" 
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+                                   width="<%= 200 * image.score %>" height="10px" xml:space="preserve">
+                                   <path class="path2" fill="#01a09e" stroke-width="3" stroke="#01a09e" d="M0 0 l1120 0"/>
+                                </svg>
+                            </td>
+                            <td><%= image.type_hierarchy %></td>
+                        </tr>
+                    <% }); %>
+                </table>
+        </div>
+    
+    </body>
+
+    <footer>
+    </footer>
+
+</html>

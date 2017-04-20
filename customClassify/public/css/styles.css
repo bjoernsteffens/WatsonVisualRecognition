@@ -1,0 +1,35 @@
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #f7f5f3 ;
+    color: #466BB0;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 50px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    min-width: 150px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+p {
+    margin-left: 50px;
+}
+
+img {
+    margin-left:50px;
+    height:10cm;
+    border: 5px solid #dddddd;
+}

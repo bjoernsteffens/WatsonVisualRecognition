@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap + jQuery -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+
+    <header>
+    </header>
+
+    <body>
+
+        <div class="jumbotron">
+            <h1>IBM Watson Visual Recognition API</h1>
+            <hr>
+            <h2>Enter the class you would like to create, provide the positive and negative sample images</h2>
+            <form action="/customclassify" method="POST" role="form">
+                <label for="classifier">Classifier</label>
+                <input type="text" 
+                   name="classifier" 
+                   id="classifier" required 
+                   value="Drones" 
+                    style="width: 25%">
+                <br/>
+                <label for="positive_file">Positive Images</label>
+                <input type="text" 
+                   name="positive_file" 
+                   id="positive_file" required 
+                   value="./images/droneparts.zip" 
+                    style="width: 25%">
+                <br/>
+                <label for="negative_file">Negative Images</label>
+                <input type="text" 
+                   name="negative_file" 
+                   id="negative_file" required 
+                   value="./images/heliparts.zip" 
+                    style="width: 25%">
+                <br/><br/>
+                <button type="submit" class="btn btn-primary btn-sm">Create Custom Classifier</button>
+            </form>
+        </div>
+
+    </body>
+
+    <footer>
+    </footer>
+
+</html>

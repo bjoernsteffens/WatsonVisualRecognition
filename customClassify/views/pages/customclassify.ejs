@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap + jQuery -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+
+    <header>
+    </header>
+
+    <body>
+
+        <div class="jumbotron">
+            <h1>IBM Watson Visual Recognition API</h1>
+            <hr>
+            <h2>IBM Watson Visual Recognition Creating Custom Classes</h2>
+            <p><%= positives %></p>
+            <form action="/" method="GET" role="form">
+                <button style="margin-left: 50px" type="submit" class="btn btn-primary btn-sm">Create More Custom Classes</button>
+            </form>
+            <hr>
+            <h2>IBM Watson Visual Recognition Custom Class Information</h2>
+                <table>
+                    <tr>
+                        <th>Class Information</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Classifier ID</td>
+                        <td><%= classifierid %></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><%= name %></td>
+                    </tr>
+                    <tr>
+                        <td>Owner</td>
+                        <td><%= owner %></td>
+                    </tr>
+                    <tr>
+                        <td>Status ID</td>
+                        <td><%= status %></td>
+                    </tr>
+                    <tr>
+                        <td>Created On</td>
+                        <td><%= created %></td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td><%= custclass %></td>
+                    </tr>
+                </table>
+        </div>
+    
+    </body>
+
+    <footer>
+    </footer>
+
+</html>

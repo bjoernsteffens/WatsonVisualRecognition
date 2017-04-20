@@ -1,0 +1,29 @@
+{
+  "name": "classifyimage",
+  "version": "1.0.0",
+  "description": "Call the Watson API with an image URL and display the classification and categories returned",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "Visual",
+    "Recognition"
+  ],
+  "author": "Bjoern W. Steffen 2017",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "url-exists": "^1.0.3",
+    "valid-url": "^1.0.9",
+    "watson-developer-cloud": "^2.14.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
